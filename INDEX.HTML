@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Terceira Geração do Modernismo Brasileiro</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+
+        /* Cabeçalho com navegação */
+        header {
+            background-color: #1a2b3c;
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+        }
+
+        /* Estilo das seções */
+        section {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        section h2 {
+            color: #1a2b3c;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 0.5rem;
+        }
+
+        section p, section ul {
+            margin-bottom: 1.5rem;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        iframe {
+            max-width: 100%;
+            margin: 1.5rem 0;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* Seção de autores com grid e imagens */
+        .autores {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .autor {
+            background-color: #f4f4f4;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .autor img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .autor h4 {
+            color: #1a2b3c;
+            margin-bottom: 1rem;
+        }
+
+        .autor ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .autor li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Estilo dos links */
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo do quiz */
+        .quiz-question {
+            margin-bottom: 2rem;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .quiz-question label {
+            display: block;
+            margin: 0.5rem 0;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #2980b9;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #1a2b3c;
+        }
+
+        #quiz-result {
+            margin-top: 1.5rem;
+            font-weight: bold;
+            color: #27ae60;
+            font-size: 1.2rem;
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #1a2b3c;
+            color: white;
+            margin-top: 3rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .autores {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>A Terceira Geração do Modernismo Brasileiro: Renovação e Reflexão</h1>
+        <p>Explore a Geração de 45, suas características, autores e obras marcantes.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#contexto">Contexto e Legado</a></li>
+            <li><a href="#caracteristicas">Características e Autores</a></li>
+            <li><a href="#quiz">Quiz Interativo</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Seção 1: Contexto e Legado -->
+        <section id="contexto">
+            <h2>O Contexto e o Legado da Terceira Geração Modernista</h2>
+            <p>A Terceira Geração do Modernismo Brasileiro, também conhecida como <strong>Geração de 45</strong>, abrange o período de aproximadamente 1945 até a década de 1970. Esse momento foi marcado por um amadurecimento estético após as vanguardas iniciais do Modernismo, com uma busca por renovação formal e reflexões sobre temas universais e existenciais.</p>
+            <p>O contexto histórico inclui o pós-Segunda Guerra Mundial, a redemocratização do Brasil após o Estado Novo e o início da Guerra Fria, que trouxeram novos questionamentos filosóficos e sociais. Os escritores dessa fase buscaram equilibrar experimentação e rigor formal, distanciando-se do experimentalismo radical da primeira fase modernista.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Expedi%C3%A7%C3%A3o_Brasileira_em_Monte_Castello_%282%29.jpg" alt="Foto histórica do Brasil pós-Segunda Guerra Mundial - Pracinha brasileiro na Itália">
+            <h3>Vídeo Introdutório</h3>
+            <p>Assista a um resumo sobre o Modernismo Brasileiro e como a Terceira Geração se destaca:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fUqkhFQvYNE" title="Modernismo Brasileiro" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <!-- Seção 2: Características e Autores -->
+        <section id="caracteristicas">
+            <h2>As Marcas da Renovação: Características e Autores Principais</h2>
+            <p>A Geração de 45 trouxe inovações significativas na literatura brasileira, com um retorno à preocupação com a forma, tanto na poesia quanto na prosa, aliado a um experimentalismo sofisticado. As principais características incluem:</p>
+            <ul>
+                <li><strong>Poesia</strong>: Retorno à métrica e à forma rigorosa, com linguagem objetiva e engajamento social. Exemplo: João Cabral de Melo Neto com sua obra <em>Morte e Vida Severina</em>.</li>
+                <li><strong>Prosa</strong>: Experimentalismo com técnicas como ficção metalinguística e fluxo de consciência, explorando temas psicológicos e universais. Exemplo: Clarice Lispector em <em>A Hora da Estrela</em>.</li>
+                <li><strong>Temas</strong>: Reflexão sobre questões existenciais, identidade brasileira e engajamento social.</li>
+            </ul>
+            <h3>Autores e Obras em Destaque</h3>
+            <div class="autores">
+                <div class="autor">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Clarice_Lispector%2C_1968.jpg" alt="Retrato de Clarice Lispector">
+                    <h4>Clarice Lispector</h4>
+                    <ul>
+                        <li><em>A Hora da Estrela</em></li>
+                        <li><em>Perto do Coração Selvagem</em></li>
+                    </ul>
+                    <img src="https://m.media-amazon.com/images/I/81z9qB4zJ+L.jpg" alt="Capa de A Hora da Estrela" style="width: 150px; height: auto; border-radius: 0;">
+                </div>
+                <div class="autor">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Joaoguimaraesrosa1.jpg" alt="Retrato de João Guimarães Rosa">
+                    <h4>João Guimarães Rosa</h4>
+                    <ul>
+                        <li><em>Grande Sertão: Veredas</em></li>
+                    </ul>
+                    <img src="https://m.media-amazon.com/images/I/81zE7h0iVKL._SL1500_.jpg" alt="Capa de Grande Sertão: Veredas" style="width: 150px; height: auto; border-radius: 0;">
+                </div>
+                <div class="autor">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Jo%C3%A3o_Cabral_de_Melo_Neto_1970_%28cropped%29.jpg" alt="Retrato de João Cabral de Melo Neto">
+                    <h4>João Cabral de Melo Neto</h4>
+                    <ul>
+                        <li><em>Morte e Vida Severina</em></li>
+                    </ul>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Morte-e-vida-severina-joo-cabral-de-melo-neto.jpg" alt="Capa de Morte e Vida Severina" style="width: 150px; height: auto; border-radius: 0;">
+                </div>
+                <div class="autor">
+                    <h4>Outros Autores</h4>
+                    <ul>
+                        <li><strong>Ledo Ivo</strong>: Poesia marcada por lirismo e reflexão</li>
+                        <li><strong>Péricles Eugênio da Silva Ramos</strong>: Poesia formal e introspectiva</li>
+                        <li><strong>Lygia Fagundes Telles</strong>: Contos psicológicos e realistas</li>
+                        <li><strong>Ariano Suassuna</strong>: <em>Auto da Compadecida</em></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Links de Aprofundamento</h3>
+            <ul>
+                <li><a href="https://www.literaturabrasileira.ufsc.br/documentos/?action=download&id=116979" target="_blank">Artigo sobre a poesia de João Cabral de Melo Neto</a></li>
+                <li><a href="https://www.revistas.usp.br/revistalp/article/view/135292" target="_blank">Análise do estilo introspectivo de Clarice Lispector</a></li>
+                <li><a href="https://www.youtube.com/watch?v=bnvEiyNhjaM" target="_blank">Vídeo sobre a Geração de 45</a></li>
+            </ul>
+        </section>
+
+        <!-- Seção 3: Quiz Interativo -->
+        <section id="quiz">
+            <h2>Teste Seu Conhecimento: Quiz da Terceira Geração Modernista</h2>
+            <p>Responda às perguntas abaixo e veja o quanto você aprendeu sobre a Geração de 45!</p>
+            <form id="quiz-form">
+                <div class="quiz-question">
+                    <p>1. Qual autor é conhecido por sua prosa experimental e profunda exploração psicológica, como em <em>A Hora da Estrela</em>?</p>
+                    <label><input type="radio" name="q1" value="a"> a) João Cabral de Melo Neto</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) Clarice Lispector</label><br>
+                    <label><input type="radio" name="q1" value="c"> c) Guimarães Rosa</label>
+                </div>
+                <div class="quiz-question">
+                    <p>2. Qual obra de João Cabral de Melo Neto é um marco da poesia engajada da Geração de 45?</p>
+                    <label><input type="radio" name="q2" value="a"> a) Grande Sertão: Veredas</label><br>
+                    <label><input type="radio" name="q2" value="b"> b) Morte e Vida Severina</label><br>
+                    <label><input type="radio" name="q2" value="c"> c) A Hora da Estrela</label>
+                </div>
+                <div class="quiz-question">
+                    <p>3. Qual é uma característica principal da prosa na Terceira Geração?</p>
+                    <label><input type="radio" name="q3" value="a"> a) Retorno à métrica rigorosa</label><br>
+                    <label><input type="radio" name="q3" value="b"> b) Experimentalismo com fluxo de consciência</label><br>
+                    <label><input type="radio" name="q3" value="c"> c) Foco exclusivo em temas regionais</label>
+                </div>
+                <div class="quiz-question">
+                    <p>4. Em que período aproximado ocorreu a Terceira Geração Modernista?</p>
+                    <label><input type="radio" name="q4" value="a"> a) 1922-1930</label><br>
+                    <label><input type="radio" name="q4" value="b"> b) 1945-1970</label><br>
+                    <label><input type="radio" name="q4" value="c"> c) 1980-2000</label>
+                </div>
+                <button type="submit">Enviar Respostas</button>
+            </form>
+            <div id="quiz-result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto sobre a Geração de 45 | 2025</p>
+    </footer>
+
+    <script>
+        // Quiz interativo
+        document.getElementById('quiz-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let score = 0;
+            const answers = {
+                q1: 'b', // Clarice Lispector
+                q2: 'b', // Morte e Vida Severina
+                q3: 'b', // Experimentalismo com fluxo de consciência
+                q4: 'b' // 1945-1970
+            };
+
+            for (let i = 1; i <= 4; i++) {
+                const q = document.querySelector(`input[name="q${i}"]:checked`);
+                if (q && q.value === answers[`q${i}`]) score++;
+            }
+
+            const resultDiv = document.getElementById('quiz-result');
+            resultDiv.innerHTML = `Você acertou ${score} de 4 perguntas! 🎉`;
+        });
+
+        // Rolagem suave para links de navegação
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
